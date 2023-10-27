@@ -45,7 +45,8 @@ nav a:hover {
    text-decoration: underline;
 }
 
-.main-content {
+/* Styling of the Main Content starts Here */
+main {
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
@@ -107,4 +108,79 @@ form {
 .login-form a,
 .signup-form a {
     text-decoration: none;
+}
+
+/* Styling of the Index Page starts here */
+.expense-form,
+.expense-list {
+    margin-top: 10vh;
+    background: white;
+    box-sizing: border-box;
+    color: #000A07;
+    min-width: 40vw;
+    height: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+}
+
+.expense-list {
+    margin-top: 4vh;
+}
+
+.expense-form h2,
+.expense-list h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.expense-form input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid rgba(128, 128, 128, 0.78);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.expense-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-input input {
+    width: 48%;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #000A07;
+    color: white;
+    font-size: 2vh;
+}
+
+.form-buttons button:hover {
+    background-color: #061C69;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.78);
+    text-align: left;
 }

@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ExpenseWise - Login</title>
+    <title>ExpenseWise - Signup</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="logo.png" alt="ExpenseWise Logo">
         </div>
-
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -22,16 +20,20 @@
         </nav>
     </header>
 
-    <div class="main-content">
-        <div class="login-form">
-            <h2>Welcome Back!</h2>
+    <main>
+        <div class="signup-form">
+            <h2>Create an Account</h2>
             <form>
+                <input type="text" placeholder="Full Name">
                 <input type="text" placeholder="Username">
+                <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
-                <button type="submit" onclick="redirectToIndex()">Login</button>
-                <p>Don't have an account? <a href="SignUp.html"> Signup </a></p>
+                <button type="button" onclick="redirectToIndex()">Sign Up</button>
+                <p>Already have an account? <a href="login.html">Login</a></p>
             </form>
         </div>
-    </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
