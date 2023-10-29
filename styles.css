@@ -112,7 +112,9 @@ form {
 
 /* Styling of the Index Page starts here */
 .expense-form,
-.expense-list {
+.expense-list,
+.category-form,
+.category-list {
     margin-top: 10vh;
     background: white;
     box-sizing: border-box;
@@ -126,12 +128,15 @@ form {
     border-radius: 5px;
 }
 
-.expense-list {
+.expense-list,
+.category-list {
     margin-top: 4vh;
 }
 
 .expense-form h2,
-.expense-list h2 {
+.expense-list h2,
+.category-form h2,
+.category-list h2 {
     text-align: center;
     margin-top: 0;
 }
@@ -143,6 +148,7 @@ form {
     border: 2px solid rgba(128, 128, 128, 0.78);
     border-radius: 5px;
     margin-bottom: 5px;
+    font-size: 16px;
 }
 
 .expense-input {
@@ -183,4 +189,74 @@ table th, table td {
     padding: 8px;
     border: 1px solid rgba(128, 128, 128, 0.78);
     text-align: left;
+}
+
+.category-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+#category-name {
+    flex: 1;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid rgba(128, 128, 128, 0.78);
+    border-radius: 5px;
+}
+
+.category-input button,
+#category-color-input {
+    margin-left: 15px;
+    height: 1.8em;
+    border: 2px solid rgba(128, 128, 128, 0.78);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-input button {
+    width: 10%;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#category-color-input {
+    font-size: 18px;
+    width: 16%;
+}
+
+#category-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 76vw;
+}
+
+.category-box {
+    background-color: #ccc;
+    padding: 2.5vh;
+    width: 15vw;
+    height: 12vh;
+    margin-right: 2.5vh;
+    margin-bottom: 2.5vh;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.category-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80%;
+}
+
+.category-box h3 {
+    margin: 1vh 0 0 0;
+    font-size: 2.5vh;
+    color: rgba(0, 0, 0, 0.75);
 }
