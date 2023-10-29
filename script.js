@@ -1,10 +1,10 @@
 function redirectToIndex() {
-    window.location.href = 'index.html';
+    window.location.href = 'expenses.html';
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     const expenseForm = document.getElementById("expense-form");
-    if(expenseForm) {
+    if (expenseForm) {
         const tableBody = document.getElementById("expense-table-body");
 
         expenseForm.addEventListener("submit", function (event) {
@@ -16,14 +16,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const title = titleInput.value;
             const amount = amountInput.value;
-            const description = descriptionInput.value || 'N/A'; // Using 'N/A' if description is not provided
+            const description = descriptionInput.value || 'N/A'; // Using "N/A" if description is not provided
 
             if (title && amount) {
+                // Get the current date and time
+                const currentDate = new Date();
+                const formattedDate = currentDate.toLocaleDateString();
+                const formattedTime = currentDate.toLocaleTimeString();
+
+                // Create a new row for the expense
                 const newRow = document.createElement("tr");
                 newRow.innerHTML = `
                     <td>${title}</td>
                     <td>${amount}</td>
                     <td>${description}</td>
+                    <td>${formattedDate}</td>
+                    <td>${formattedTime}</td>
                 `;
                 tableBody.appendChild(newRow);
                 expenseForm.reset();
@@ -41,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // If there are no rows, display the message
                 const messageRow = document.createElement("tr");
                 messageRow.innerHTML = `
-                <td colspan="3">No expenses added yet</td>
+                <td colspan="5">No expenses added yet</td>
             `;
                 tableBody.appendChild(messageRow);
                 console.log(rows.length);
@@ -124,4 +132,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-
