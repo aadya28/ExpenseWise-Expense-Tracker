@@ -91,6 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
             generateRandomColorButton.style.backgroundColor = categoryColorInput.value;
         });
 
+        categoryForm.addEventListener("reset", function (event) {
+            generateRandomColorButton.style.backgroundColor = "white";
+        });
+
         function getRandomColor() {
             const letters = '0123456789ABCDEF';
             let color = '#';
